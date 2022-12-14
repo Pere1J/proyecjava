@@ -30,3 +30,23 @@ for (let i = 0; i < cats.length; i++) {
     if (typeof(cats[i])=="string") { 
        console.log('mi gato se llama ' + cats[i]);}; 
   }
+
+  /*Dado un array de strings imprime un array de solamente los strings
+   que empiezan por ‘a’.*/
+  
+   let names = ['Peter', 'Paul', 'Mary']
+   let namesa = []
+   
+ 
+   for (let i = 0; i < names.length; i++) {
+    if (names [i].includes ('a')) {namesa.push(names [i]);}
+     
+   }
+   console.log('los nombres con la letra a son: ' + namesa)
+
+  /*Dado un array de strings (con palabras repetidas)
+   imprime el numero de repeticiones de la palabra que más veces aparezca.*/
+  
+
+   /*Dado un array de strings (con palabras repetidas)
+    imprime el numero de repeticiones de la palabra que más veces aparezca.*/
