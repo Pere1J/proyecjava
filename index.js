@@ -79,8 +79,8 @@ animals.forEach((animal) => {
   }
 });
 //lo anterior es contar
-let maxanimals = 0
-let aninalmax = ""
+let maxanimals = 0;
+let aninalmax = "";
 animals.forEach((animal) => {
   let animalbuscado = animal;
   let sumaanimal = 0;
@@ -90,12 +90,54 @@ animals.forEach((animal) => {
       sumaanimal += 1;
     }
   });
-  if (sumaanimal > maxanimals ) {
-   maxanimals = sumaanimal
-   animalmax = animal
+  if (sumaanimal > maxanimals) {
+    maxanimals = sumaanimal;
+    animalmax = animal;
   }
-
-
 });
 
-console.log('la palabra más utilizada aparece ' + maxanimals + ' veces y es el ' + animalmax) 
+console.log(
+  "la palabra más utilizada aparece " +
+    maxanimals +
+    " veces y es el " +
+    animalmax
+);
+
+//Dado un array de objetos "producto" (con nombre y precio)
+// imprime un array de los objetos que sean más caros de 10.
+
+let productos = [
+  "pelota:10", 
+  "tambor:5",
+  "muñeca:15",
+  "cochecito:2"
+];
+
+/* productos.forEach(nombreproducto => {productos[i].split(':'); let nombreproducto = [0];
+let juguete = nombreproducto [0];
+let precio = numero(nombreproducto[1]);
+total += precio;
+subproducto = juguete + ' ' + precio
+  
+}); */
+//esta fucion separa los elementos en base a : con split
+
+total = 0;
+list = ' '
+
+
+for(let i = 0; i < productos.length; i++) {
+  let subArray = productos[i].split(':');
+  let juguete = subArray[0];
+  let price = Number(subArray[1]);
+  total += price;
+  itemText = juguete + ' ' + price;
+
+  let listItem = document.createElement('li');
+  listItem.textContent = itemText;
+  list.appendChild(listItem);
+}
+  
+ 
+  
+
