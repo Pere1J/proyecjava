@@ -126,18 +126,17 @@ let listaProductos = [
   "pelota:10", 
   "tambor:5",
   "muñeca:15",
-  "cochecito:22"
+  "cochecito:22",
+  "trenecito:104"
 ];
-let juguete = 0
-let precio = 0
-let productoMasDiez = 0
+let productoMasDiez = ""
 
 //defino q  cada integrante de la lista se denomina producto
 //y digo que cada producto se compone de producto y precio separado por :
 listaProductos.forEach((producto) => {[producto, precio]= producto.split(":");
   
   console.log(producto,);
-  if (precio >= 10) {  productoMasDiez += producto
+  if (precio >= 10) {  productoMasDiez += producto + ","
     
   };
 });
