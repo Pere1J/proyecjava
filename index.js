@@ -9,17 +9,32 @@ for (let i = 0; i < numberList.length; i++) {
   }
 }
 console.log("el número más alto es " + maxNumber);
+// otra posible solución  
+
+
+
 
 //Dado un array de números imprime por consola la suma de todos los que sean pares.
 
 let pairNumbers = 0;
 
-for (let i = 0; i < numberList.length; i++) {
+ /* for (let i = 0; i < numberList.length; i++) {
   if (numberList[i] % 2 == 0) {
     pairNumbers += numberList[i];
   }
+} 
+console.log("la suma de los pares es " + pairNumbers); */
+
+//ej. for of
+//por cada cadaItem de numberList
+for (const cadaItem of numberList) {
+  if (cadaItem % 2 == 0) {pairNumbers += cadaItem}
+  
 }
-console.log("la suma de los pares es " + pairNumbers);
+console.log (pairNumbers)
+                                     
+
+
 
 //Dado un array de números y strings imprime un array de solamente los strings.
 
@@ -55,7 +70,7 @@ for (let i = 0; i < names.length; i++) {
   }
 }
 console.log(namesa2);
-
+//================================================================================
 /*Dado un array de strings (con palabras repetidas)
    imprime el numero de repeticiones de la palabra que más veces aparezca.*/
 
@@ -103,40 +118,31 @@ console.log(
     animalmax
 );
 
+//================================================================================
 //Dado un array de objetos "producto" (con nombre y precio)
 // imprime un array de los objetos que sean más caros de 10.
 
-let productos = [
+let listaProductos = [
   "pelota:10", 
   "tambor:5",
   "muñeca:15",
-  "cochecito:2"
+  "cochecito:22"
 ];
+let juguete = 0
+let precio = 0
+let productoMasDiez = 0
 
-/* productos.forEach(nombreproducto => {productos[i].split(':'); let nombreproducto = [0];
-let juguete = nombreproducto [0];
-let precio = numero(nombreproducto[1]);
-total += precio;
-subproducto = juguete + ' ' + precio
+//defino q  cada integrante de la lista se denomina producto
+//y digo que cada producto se compone de producto y precio separado por :
+listaProductos.forEach((producto) => {[producto, precio]= producto.split(":");
   
-}); */
-//esta fucion separa los elementos en base a : con split
+  console.log(producto,);
+  if (precio >= 10) {  productoMasDiez += producto
+    
+  };
+});
 
-total = 0;
-list = ' '
-
-
-for(let i = 0; i < productos.length; i++) {
-  let subArray = productos[i].split(':');
-  let juguete = subArray[0];
-  let price = Number(subArray[1]);
-  total += price;
-  itemText = juguete + ' ' + price;
-
-  let listItem = document.createElement('li');
-  listItem.textContent = itemText;
-  list.appendChild(listItem);
-}
+console.log('los productos más caros de 10 son ' + productoMasDiez)
   
  
   
