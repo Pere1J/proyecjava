@@ -39,17 +39,20 @@ console.log (pairNumbers)
 //Dado un array de números y strings imprime un array de solamente los strings.
 
 let cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin", 5, 6, 7];
+let solostring = []
 
 for (let i = 0; i < cats.length; i++) {
   if (typeof cats[i] == "string") {
-    console.log("mi gato se llama " + cats[i]);
+    solostring.push(cats[i])
+    
   }
 }
+console.log("mis gatos se llaman " + solostring);
 
 /*Dado un array de strings imprime un array de solamente los strings
    que empiezan por ‘a’.*/
 
-let names = ["Peter", "Paul", "Mary", "Adan", "aroa"];
+let names = ["Peter", "Paul", "Mary", "Luis", "aroa"];
 let namesa = [];
 let namesa2 = [];
 
@@ -123,26 +126,46 @@ console.log(
 // imprime un array de los objetos que sean más caros de 10.
 
 let listaProductos = [
-  "pelota:10", 
-  "tambor:5",
-  "muñeca:15",
-  "cochecito:22",
-  "trenecito:104"
+
+  {
+    nombre: 'pelota',
+    precio: 10,
+  },
+  {
+    nombre: 'muñeca',
+    precio: 5,
+  },
+  {
+    nombre: 'cochecito',
+    precio: 25,
+  }
+
+  // "pelota:10", 
+  // "tambor:5",
+  // "muñeca:15",
+  // "cochecito:22",
+  // "trenecito:104"
+
 ];
 let productoMasDiez = ""
 
 //defino q  cada integrante de la lista se denomina producto
 //y digo que cada producto se compone de producto y precio separado por :
-listaProductos.forEach((producto) => {[producto, precio]= producto.split(":");
+// listaProductos.forEach((producto) => {
   
-  console.log(producto,);
-  if (precio >= 10) {  productoMasDiez += producto + ","
+//   [producto, precio]= producto.split(":");
+//     console.log(producto,);
+//   if (precio >= 10) {  productoMasDiez += producto + ","
     
-  };
-});
+//   };
+// });
 
-console.log('los productos más caros de 10 son ' + productoMasDiez)
+// console.log('los productos más caros de 10 son ' + productoMasDiez)
+
+
+let productMasDiez = listaProductos.filter(product => product.precio > 10)
+console.log(productMasDiez)
   
- 
+ //=====================================================================
   
 
