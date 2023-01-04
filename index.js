@@ -147,7 +147,7 @@ let listaProductos = [
   // "trenecito:104"
 
 ];
-let productoMasDiez = ""
+// let productoMasDiez = ""
 
 //defino q  cada integrante de la lista se denomina producto
 //y digo que cada producto se compone de producto y precio separado por :
@@ -163,7 +163,7 @@ let productoMasDiez = ""
 // console.log('los productos más caros de 10 son ' + productoMasDiez)
 
 
-let productMasDiez = listaProductos.filter(product => product.precio > 10)
+let productMasDiez = listaProductos.filter(product => product.precio >= 10)
 console.log(productMasDiez)
   
  //=====================================================================
